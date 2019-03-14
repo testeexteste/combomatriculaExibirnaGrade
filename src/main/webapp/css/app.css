@@ -1,0 +1,233 @@
+.loading{
+	display: block;
+	width: 200px;
+}
+
+.content { 
+  margin: 0px auto;
+  background-color: rgb(242, 20, 9);
+  background-image: url("../img/fundo_red.png");
+}
+#all {
+	width: 1280px; overflow: hidden;
+}
+
+.TelaDeLogin { 
+  background-image: url("../img/FundoVermelhoEdit.png");
+}
+
+.FundoRed { 
+  background-image: url("../img/Background_random_preto.png");
+  background-color: rgb(0, 0, 0);
+  opacity: 1;
+}
+
+.FundoBlack { 
+  background-image: url("../img/fundo_black.png");
+}
+
+.card-background-page { 
+  position: relative;
+  text-align: center;
+  border-radius: 10px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: 50;
+  background-image: url("../img/fundo_red.png");
+}
+
+  .card-title {
+    position: absolute;
+    top: 36%;
+    font-size: 2.0em;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .card-mall {
+    font-size: 1.0em;
+    position: absolute;
+    top: 100%;
+    z-index: 60;
+    width: 100%;
+  }
+    .card-distancia {
+    font-size: 0.8em;
+    position: absolute;
+    top: 85%;
+    width: 100%;
+  }
+    .card-localizacao {
+    font-size: 0.8em;
+    position: absolute;
+    top: 90%;
+    width: 100%;
+  }
+  
+
+.card-image { 
+  position: relative;
+  height: 150px;
+
+  top: 0px;
+  border-radius: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.contentAltura { 
+  height: 86%;
+  top: 7%;
+}
+
+.style4920 { 
+  background-color: rgb(255, 0, 0);
+  color: rgb(155, 113, 242);
+}
+
+.style7379 { 
+  color: rgb(90, 15, 230);
+}
+
+.style4850 { 
+  color: rgb(0, 64, 128);
+}
+
+.blackground { 
+  background-color: rgb(0, 0, 0);
+  opacity: 0.8;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 10px;
+  border: 0px hidden rgb(0, 0, 0);
+  border-radius: 10px;
+  text-align: justify;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.redground { 
+  background-image: url("../img/Background_random_vermelho.png");
+  opacity: 1;
+}
+
+.whiteground { 
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.headermall { 
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.footermall { 
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 5px;
+  border-radius: 0px 0px 15px 15px;
+}
+
+redbackground { 
+  background-image: url("../img/Background_random_vermelho.png");
+}
+
+blackgroundbutton { 
+  background-color: rgb(31, 31, 31);
+  border-radius: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+  opacity: 1;
+}
+
+.style6303 { 
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0px;
+  color: rgb(255, 255, 255) !important;
+}
+
+.bordaPreta { 
+  border: 1px none rgb(0, 0, 0);
+}
+
+.style6903 { 
+  text-align: center;
+}
+
+.itemHeader {
+  background-color: #e6b2b2 !important;
+}
+
+.itemMall {
+  border-color: #ddd;
+  background-color: #fff;
+  color: #444;
+  position: relative;
+  z-index: 2;
+  display: block;
+  font-size: 16px; }
+
+.QtdItem { 
+  color: rgb(0, 0, 0);
+  text-align: center;
+  height: 25px;
+  letter-spacing: 1px;
+  line-height: 1px;
+  width: 10px;
+}
+
+.style3057 { 
+  width: 200px;
+  height: 150px;
+}
+
+.style9587 { 
+  text-align: right;
+}
+
+.textoBranco { 
+  color: rgb(234, 234, 234);
+}
+
+.subTitulo { 
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 1px 0px;
+}
+
+.TextoCentralizado { 
+  text-align: center;
+}
+
+.blackDestaque { 
+  background-color: rgb(0, 0, 0);
+  opacity: 0.8;
+  margin-bottom: 5px;
+  padding: 1px;
+  border: 0px hidden rgb(0, 0, 0);
+  border-radius: 5px;
+  text-align: justify;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.qtdItem { 
+  display: block;
+  padding-left: 0px;
+  color: rgb(17, 17, 17);
+  width: 20px;
+  padding-top: 0px !important;
+  padding-right: 0px !important;
+  height: 25px !important;
+  font-size: 12px !important;
+  line-height: 5px !important;
+}

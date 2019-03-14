@@ -1,0 +1,58 @@
+<ion-view view-title="Adicionais" class="pane" ng-init="vars.total = null; vars.totalAdicionais = 0"> 
+  <ion-nav-buttons side="left"> 
+    <button class="button button-icon button-clear ion-navicon" menu-toggle="left"> </button> 
+  </ion-nav-buttons> 
+  <ion-content class="contentAltura scroll-content redground" data-content="true" data-replace="false" data-component="crn-ion-content"> 
+    <div class="component-holder ng-binding ng-scope col-xs-12" data-component="crn-list" id="crn-list-867288"> 
+      <datasource name="Carrinho" entity="api/cronapi/query/uv5vovflivcg/" keys="id" rows-per-page="100" on-before-create="" on-after-create="" on-before-update="" on-after-update="" on-before-delete="" on-after-delete="" on-after-fill=""></datasource> 
+      <div crn-datasource="Carrinho"> 
+        <div class="ng-binding ng-scope " data-replace="false" data-container="true" data-component="crn-list-item-avatar" id="crn-list-item-avatar-183673"> 
+          <a class="item item-avatar-left" xattr-position="item-avatar-left" href=""> 
+            <div class="item-content text-left  col-xs-6" xattr-text-position="text-left"> 
+              <h2 class="dark" xattr-theme="dark">{{Carrinho.active.produtos.descricao}}</h2> 
+              <h3 class="dark" xattr-theme="dark">{{Carrinho.active.produtos.detalhe}}</h3> 
+              <h3 class="dark" xattr-theme="dark" id="lblValorCarrinho">{{Carrinho.active.produtos.valor | mask:'R$ #,00'}}</h3>
+              <h3 class="dark" xattr-theme="dark" id="lblTotalItem">Total: {{(vars.totalItem ? vars.totalItem : (Carrinho.active.produtos.quantidade ? Carrinho.active.produtos.quantidade * Carrinho.active.produtos.valor : Carrinho.active.produtos.valor)) | mask:'R$ #,00'}}</h3> 
+            </div> 
+            <div class="col-xs-6"> 
+              <div id="qtd_adic_p"> 
+                <button class="button-icon col-xs-1" type="submit" ng-click="blockly.js.blockly.QuantidadeItem.SubtraiQuantidade()" data-component="crn-button" id="crn-button94491" xattr-fullsize="" xattr-type="button-clear" xattr-theme="button-light"><i class="ion ion-android-remove-circle"></i> <span></span></button> 
+                <input id="textinput-id" type="number" placeholder="" ng-model="Carrinho.active.quantidade" mask="#;0" disabled="" class="col-xs-2 qtdItem" onreset="blockly.js.blockly.QuantidadeAdicionais.quantidade(rowData)"> 
+                <button class="button-icon col-xs-1" type="submit" ng-click="blockly.js.blockly.QuantidadeItem.AdicaoQuantidade()" data-component="crn-button" id="crn-button82181" xattr-type="button-clear" xattr-theme="button-light"><i class="ion ion-android-add-circle"></i> <span></span></button> 
+              </div> 
+            </div> </a> 
+        </div> 
+      </div> 
+    </div> 
+     
+    <div crn-datasource="Adicionais"> 
+    <div class="component-holder ng-binding ng-scope col-xs-12" data-component="crn-datasource" id="crn-datasource-772952"> 
+      <datasource name="Adicionais" entity="api/cronapi/query/r1ivh5c4agj5/{{params.id}}" keys="id" rows-per-page="30" on-before-create="" on-after-create="" on-before-update="" on-after-update="" on-before-delete="" on-after-delete="" on-after-fill="" schema="[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;produto&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;status&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;produtos_adicional&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;produto_descricao&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;status_descricao&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;produtos_adicional_descricao&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}]" condition=""></datasource> 
+    </div> 
+    <!--<ADICIONAL>--> 
+
+      <div class="component-holder ng-binding ng-scope col-xs-12" ng-repeat="rowData in datasource.data" data-replace="false" data-container="true" data-component="crn-list-item-avatar" id="crn-list-item-avatar-183670"> 
+        <a class="item item-avatar-left" xattr-position="item-avatar-left" href=""> 
+          <div class="item-content text-left  col-xs-6" xattr-text-position="text-left"> 
+            <h2 class="dark" xattr-theme="dark">{{rowData.produtos_adicional.descricao}}</h2> 
+            <h3 class="dark" xattr-theme="dark">{{rowData.produtos_adicional.valor | mask:'R$ #,00'}}</h3> 
+          </div> 
+          <div class="col-xs-6"> 
+            <div id="qtd_adic"> 
+              <button class="button-icon col-xs-1" type="submit" ng-click="blockly.js.blockly.QuantidadeAdicionais.SubtraiQuantidade(rowData)" data-component="crn-button" id="crn-button94491" xattr-fullsize="" xattr-type="button-clear" xattr-theme="button-light"><i class="ion ion-android-remove-circle"></i> <span></span></button> 
+              <input id="textinput-id" type="number" placeholder="" ng-model="rowData.quantidade" mask="#;0" disabled="" class="col-xs-2 qtdItem"> 
+              <button class="button-icon col-xs-1" type="submit" ng-click="blockly.js.blockly.QuantidadeAdicionais.AdicaoQuantidade(rowData)" data-component="crn-button" id="crn-button82181" xattr-type="button-clear" xattr-theme="button-light"><i class="ion ion-android-add-circle"></i> <span></span></button> 
+            </div> 
+          </div> </a> 
+      </div> 
+    </div> 
+    <!--<ADICIONAL FIM>--> 
+    <div style="height: 20px;" data-component="crn-spacer" class="component-holder col-xs-12" id="crn-spacer-877668">
+       &nbsp; 
+    </div> 
+  </ion-content> 
+  <div class="tabs tabs-icon-top"> 
+    <a class="tab-item" ng-click="blockly.js.blockly.VoltarItem.Adicionais_Itens(params.idCar, params.tela)"> <i class="icon ion ion-android-arrow-back"></i> Voltar </a> 
+    <a class="tab-item" href="" ng-click="blockly.js.blockly.ExibirAdicionais.ConfirmarAdicional()"> <i class="icon ion ion-checkmark-circled"></i> Confirmar </a> 
+  </div> 
+</ion-view>
